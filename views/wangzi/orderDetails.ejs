@@ -1,0 +1,123 @@
+<div id="main-container">
+    <div id="breadcrumb">
+        <ul class="breadcrumb">
+            <li><i class="fa fa-home"></i><a href="orderList.html"> 主页</a></li>
+            <li class="active">订单审批</li>
+            <li class="active">订单详情</li>
+        </ul>
+    </div><!-- /breadcrumb-->
+    <div class="panel panel-default" style="margin: 15px;">
+        <div class="panel-heading">
+            <a class="btn btn-xs btn-default" onclick="history.go(-1)" style="margin-right: 10px;">返回</a>订单编号：tg312312 状态：（待审核）
+        </div>
+        <div class="panel-tab clearfix">
+            <ul class="tab-bar">
+                <li class="active"><a href="orderDetails.html#basicInfo" data-toggle="tab"><i class="fa fa-home"></i> 基本信息</a></li>
+                <li><a href="orderDetails.html#cusInfo" data-toggle="tab"><i class="fa fa-pencil"></i> 客户信息</a></li>
+                <li><a href="orderDetails.html#urgentContact" data-toggle="tab"><i class="fa fa-comments"></i> 紧急联系人</a></li>
+                <li><a href="orderDetails.html#approval" data-toggle="tab"><i class="fa fa-legal"></i> 审批</a></li>
+            </ul>
+        </div>
+        <div class="panel-body">
+            <div class="tab-content">
+                <div class="tab-pane fade in active table01" id="basicInfo">
+                    <p>销售顾问姓名：彭浩</p>
+                    <p>销售顾问手机：18021062815</p>
+                    <p>车辆品牌：宝马X6</p>
+                    <p>车辆子品牌：宝马X6</p>
+                    <p>车辆型号：x6</p>
+                    <p>车辆颜色：大红色</p>
+                    <p>车辆票价：50万</p>
+                    <p>首付金额：20万</p>
+                    <p>首付比例：20万</p>
+                    <p>尾款：11%</p>
+                    <p>尾款比例：22%</p>
+                    <p>贷款期限：360月</p>
+                </div>
+                <div class="tab-pane fade table02" id="cusInfo">
+                    <div class="panel-heading" style="margin-bottom: 10px;">
+                        本人信息
+                    </div>
+                    <p>姓名：彭浩</p>
+                    <p>手机号码：1802102839</p>
+                    <p>身份证：38383838383838383939</p>
+                    <p>出生日期：2006－03-3</p>
+                    <p>年龄：27</p>
+                    <p>性别：男</p>
+                    <p>学历：本科</p>
+                    <p>婚姻状况：已婚</p>
+                    <p>居住城市：杭州</p>
+                    <p>居住地址：杭州市江干区下沙西松合时代商场</p>
+                    <p>居住年限：2年</p>
+                    <p>主要收入：</p>
+                    <p>工作单位：杭州xx科技有限公司</p>
+                    <p>单位电话：22321321312</p>
+                    <p>单位省市：杭州</p>
+                    <p>单位地址：xx</p>
+                    <div class="clear"></div>
+                    <div class="panel-heading" style="margin-bottom: 10px;">
+                        配偶信息
+                    </div>
+                    <p>姓名：xxx</p>
+                    <p>手机号码：1802102839</p>
+                    <p>身份证：38383838383838383939</p>
+                    <p>出生日期：2006－03-3</p>
+                    <p>子女人数</P>
+                </div>
+                <div class="tab-pane fade table03" id="urgentContact">
+                    <p>家庭紧急联系人：xxx 电话：18021028239</p>
+                    <p>工作紧急联系人：xxx 电话：18021028239</p>
+                    <p>朋友紧急联系人：xxx 电话：18021028239</p>
+                </div>
+                <div class="tab-pane fade table04" id="approval">
+                   <!-- <p><a class="btn btn-success sp">审批</a></p> -->
+                    <p>
+                        <label>批准首付金额：</label><br />
+                        <span style="padding-left: 10px;">机审：<input type="text" class="form-control input-sm inputcss" value="10万">人工：<input type="text" class="form-control input-sm inputcss" value="10万"></span>
+                    </p>
+                    <p>
+                        <label>批准尾款金额：</label><br />
+                        <span style="padding-left: 10px;">机审：<input type="text" class="form-control input-sm inputcss" value="10万">人工：<input type="text" class="form-control input-sm inputcss" value="10万"></span>
+                    </p>
+                    <p>
+                        <label>批准还款金额：</label><br />
+                        <span style="padding-left: 10px;">机审：<input type="text" class="form-control input-sm inputcss" value="10万">人工：<input type="text" class="form-control input-sm inputcss" value="10万"></span>
+                    </p>
+                    <p>
+                        <label>批准申请金额：</label><br />
+                        <span style="padding-left: 10px;">机审：<input type="text" class="form-control input-sm inputcss" value="10万">人工：<input type="text" class="form-control input-sm inputcss" value="10万"></span>
+                    </p>
+                    <p>
+                        <label>批准项目总额：</label><br />
+                        <span style="padding-left: 10px;">机审：<input type="text" class="form-control input-sm inputcss" value="10万">人工：<input type="text" class="form-control input-sm inputcss" value="10万"></span>
+                    </p>
+                    <p>
+                        <label>批准开票价：</label><br />
+                        <span style="padding-left: 10px;">机审：<input type="text" class="form-control input-sm inputcss" value="10万">人工：<input type="text" class="form-control input-sm inputcss" value="10万"></span>
+                    </p>
+                    <p>
+                        <label>批准保险金额：</label><br />
+                        <span style="padding-left: 10px;">机审：<input type="text" class="form-control input-sm inputcss" value="10万">人工：<input type="text" class="form-control input-sm inputcss" value="10万"></span>
+                    </p>
+                    <p>
+                        <label>批准购车税金额：</label><br />
+                        <span style="padding-left: 10px;">机审：<input type="text" class="form-control input-sm inputcss" value="10万">人工：<input type="text" class="form-control input-sm inputcss" value="10万"></span>
+                    </p>
+                    <p>
+                        <label>审批意见：</label><br />
+                        <textarea class="form-control"></textarea><br />
+                        <a href="javasript:;" class="btn btn-success">审批通过</a>
+                        <a href="javasript:;" class="btn btn-default">审批拒绝</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div><!-- /panel -->
+</div><!-- /main-container -->
+<script>
+    if(window.location.hash == "#approval"){
+        $(".tab-bar li:last").addClass("active").siblings().removeClass("active");
+        $(".tab-content .tab-pane:last").addClass("active in").siblings().removeClass("active in");
+        $('html, body').animate({scrollTop:0}, 'false');
+    }
+</script>

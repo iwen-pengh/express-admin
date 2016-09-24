@@ -1,0 +1,104 @@
+.fl{
+    float: left;
+}
+.fr{
+    float: right;
+}
+.clear{
+    clear: both;
+}
+.relative{
+    position: relative;
+}
+.inputcss{
+    display: inherit;
+    width: 100px;
+    border: 0;
+}
+.sp {
+    position: fixed;
+    right: 30px;
+    bottom: 160px;
+}
+/**ace **/
+.profile-user-info-striped {
+    border: 1px solid #dcebf7;
+}
+.profile-info-row {
+    position: relative;
+}
+.profile-info-name {
+    position: absolute;
+    width: 110px;
+    text-align: right;
+    padding: 6px 10px 6px 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    font-weight: normal;
+    color: #667e99;
+    background-color: transparent;
+    border-top: 1px dotted #d5e4f1;
+}
+.profile-user-info-striped .profile-info-name {
+    color: #336199;
+    background-color: #edf3f4;
+    border-top: 1px solid #f7fbff;
+}
+.profile-user-info-striped .profile-info-value {
+    border-top: 1px dotted #dcebf7;
+    padding-left: 12px;
+}
+.profile-info-value {
+    padding: 6px 4px 6px 6px;
+    margin-left: 120px;
+    border-top: 1px dotted #d5e4f1;
+}
+.profile-info-row:first-child .profile-info-name {
+    border-top: 0;
+}
+.ace-thumbnails {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.ace-thumbnails>li {
+    float: left;
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin: 2px;
+    border: 2px solid #333;
+}
+.ace-thumbnails.lookpic li {
+    width: 150px;
+    height: 150px;
+}
+.gallery-item{
+    width: 200px;
+    float: left;
+    margin-right: 10px;
+    height: 100px;
+}
+/**ace **/
+.imArch .profile-info-row{
+    width: 50%; float: left;
+}
+.profile-info-name.reloadImg{
+    right: 10px;
+    left: auto;
+    background: none;
+}
+.profile-info-name.reloadImg input{
+    position:absolute;
+    top: 7px;
+    right: 10px;
+    width: 85px;
+    height: 30px;
+    opacity: 0;
+    cursor: pointer
+}
+.table01 p,.table02 p,.table04 p{
+    width: 50%;
+    float: left;
+}

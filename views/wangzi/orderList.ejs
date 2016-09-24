@@ -1,0 +1,125 @@
+<div id="main-container">
+	<div id="breadcrumb">
+		<ul class="breadcrumb">
+			<li><i class="fa fa-home"></i><a href="orderList.html"> 主页</a></li>
+			<li class="active">订单审批</li>
+		</ul>
+	</div><!-- /breadcrumb-->
+	<div class="panel panel-default table-responsive" style="    margin: 15px;">
+			<div class="panel-heading">
+				申请查询
+				<span class="label label-info pull-right"><%= items.recordTotal %></span>
+				<input type="hidden" name="pageNumber" value="<%= items.pageNumber %>">
+			</div>
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-12 col-sm-12">
+						<div class="form-inline no-margin">
+							<div class="form-group" style="margin: 5px;">
+								申请编号
+								<input type="text" style="width: 130px;" class="form-control input-sm" data-minlength="1" name="appNumber" placeholder="申请编号">
+							</div>
+							<div class="form-group" style="margin: 5px;">
+								贷款申请UUID
+								<input type="text" style="width: 130px;" class="form-control input-sm" data-minlength="1" name="loanAppUUID" placeholder="贷款申请UUID">
+							</div>
+							<div class="form-group" style="margin: 5px;">
+								申请状态
+								<select id="orderStatus" class="input-sm form-control inline" name="status" style="width:130px;">
+									<option value=""></option>
+									<option value="SUBMITTED">待审核</option>
+									<option value="DISAPPROVED">审核拒绝</option>
+									<option value="APPROVED|APPROVED_QUA">审核通过</option>
+								</select>
+							</div>
+							<div class="form-group" style="margin: 5px;">
+								客户姓名
+								<input type="text" style="width: 130px;"  class="form-control input-sm" data-minlength="1" name="customerName" placeholder="客户姓名">
+							</div>
+							<div class="form-group" style="margin: 5px;">
+								销售顾问姓名
+								<input type="text" style="width: 130px;" class="form-control input-sm" data-minlength="1" name="salesName" placeholder="销售顾问姓名">
+							</div>
+							<div class="form-group" style="margin: 5px;">
+								产品UUID
+								<input type="text" style="width: 130px;" class="form-control input-sm" data-minlength="1" name="productUUID" placeholder="产品UUID">
+							</div>
+							<div class="form-group" style="margin: 5px;">
+								身份证号
+								<input type="text" style="width: 130px;" class="form-control input-sm" data-minlength="1" name="idNumber" placeholder="身份证号">
+							</div>
+							<div class="form-group" style="margin: 5px;">
+								经销商UUID
+								<input type="text" style="width: 130px;" class="form-control input-sm" data-minlength="1" name="supplierUUID" placeholder="经销商UUID">
+							</div>
+							<div class="form-group" style="margin: 5px;">
+								金融顾问姓名
+								<input type="text" style="width: 130px;" class="form-control input-sm" data-minlength="1" name="finSpecialName" placeholder="金融顾问姓名">
+							</div>
+							<div class="form-group" style="margin: 5px;">
+								申请开始时间
+								<input type="text" id="beginStr" data-date-format="yyyy-mm-dd" readonly  style="width: 130px;" name="startTime" class="form-control input-sm" data-minlength="1" placeholder="申请开始时间">
+							</div>
+							<div class="form-group" style="margin: 5px;">
+								申请结束时间
+								<input type="text" id="endStr" data-date-format="yyyy-mm-dd" readonly  style="width: 130px;" class="form-control input-sm" data-minlength="1" name="endTime" placeholder="申请结束时间">
+							</div>
+							<a id="getOrderList" class="btn btn-default btn-sm">查询</a>
+						</div>
+					</div><!-- /.col -->
+				</div><!-- /.row -->
+				<table class="table table-striped" id="responsiveTable" style="margin-top: 15px;">
+					<thead>
+					<tr>
+						<th>申请编号</th>
+						<th>客户姓名</th>
+						<th>申请状态</th>
+						<th>申请时间</th>
+						<th>销售专员</th>
+						<th>操作</th>
+					</tr>
+					</thead>
+					<tbody>
+					<% if (items.objects && items.objects.length > 0) {%>
+						<% for(var i=0; i < items.objects.length; i++) { %>
+						<tr>
+							<td><a href="orderDetails.html" style="color: #6bafbd"></a><%= items.objects[i].app_number %></td>
+							<td> <%= items.objects[i].customer_name %></td>
+							<td> <%= items.objects[i].status %></td>
+							<td> <%= items.objects[i].apply_date %></td>
+							<td> <%= items.objects[i].sales_name %></td>
+							<td><a href="orderDetails.html#approval" class="label label-success">审核</a></td>
+						</tr>
+						<% } %>
+					<% } %>
+					</tbody>
+				</table>
+				<div class="panel-footer clearfix">
+					<ul class="pagination pagination-xs m-top-none pull-right">
+						<% if (items.pageNumber === 1 || items.pageTotal === 1) { %>
+						<li class="disabled"><a>上一页</a></li>
+						<% } else { %>
+						<li ><a class="prePage">上一页</a></li>
+						<% } %>
+						<% for(var j=1; j < items.pageTotal + 1; j++) { %>
+							<% if (j === items.pageNumber) { %>
+							<li class="active"><a class="indexPage" ><%= j %></a></li>
+							<% } else { %>
+							<li ><a class="indexPage" ><%= j %></a></li>
+							<% } %>
+						<% } %>
+						<% if (items.pageNumber === items.pageTotal || items.pageTotal === 1) { %>
+						<li class="disabled"><a>下一页</a></li>
+						<% } else { %>
+						<li ><a class="nextPage">下一页</a></li>
+						<% } %>
+					</ul>
+				</div>
+			</div>
+
+	</div><!-- /panel -->
+</div><!-- /main-container -->
+<script type="text/javascript">
+	jQuery('#beginStr').datepicker();
+	jQuery('#endStr').datepicker();
+</script>

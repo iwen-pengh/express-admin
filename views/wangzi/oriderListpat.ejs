@@ -1,0 +1,26 @@
+<table class="table table-striped" id="responsiveTable" style="margin-top: 15px;">
+    <thead>
+    <tr>
+        <th>申请编号</th>
+        <th>客户姓名</th>
+        <th>申请状态</th>
+        <th>申请时间</th>
+        <th>销售专员</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+    <tbody>
+
+    <% items.forEach(function(item){ %>
+    <tr>
+        <td><a href="orderDetails.html" style="color: #6bafbd"> Leather Bag</a></td>
+        <td><%= item.name %></td>
+        <td>待审核</td>
+        <td>2010-01-10</td>
+        <td>付银海</td>
+        <td><a href="orderDetails.html#approval" class="label label-success">审核</a></td>
+    </tr>
+
+    <% }) %>
+    </tbody>
+</table>
